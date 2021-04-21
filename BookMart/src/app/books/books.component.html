@@ -1,0 +1,20 @@
+
+
+<div class="container">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{booksData.name}}</h5>
+      <p class="card-text">{{booksData.price}}$</p>
+      <p  class="card-text"><span *ngIf="booksData.quantity>0 && booksData.quantity < 20; else dothis" [ngStyle]="{color:'red'}">Hurry up only left <span  [ngStyle]="{color:'black'}">{{booksData.quantity}}</span> </span>
+      <ng-template #dothis>
+        <span *ngIf="booksData.quantity < 1; else remainingBookQuantity" [ngStyle]="{color:'red'}">out of stock</span>
+      </ng-template>
+      <ng-template #remainingBookQuantity>
+       <p>only left <span  [ngStyle]="{color:'black'}"[ngStyle]="{color:'black'}">{{booksData.quantity}}</span>
+      </ng-template>
+      </p>
+      <button type="button"  [disabled]="booksData.quantity<1" class="only-on-hover btn btn-primary" (click)="addToCart(booksData)">Add To Cart</button>
+    </div>
+  </div>
+  </div>

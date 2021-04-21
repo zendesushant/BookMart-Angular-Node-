@@ -1,0 +1,11 @@
+<div *ngFor="let desc of booksDescription">
+    
+    
+    <div *ngIf="desc.name===title"><strong>What's All About</strong><hr>
+       <div> {{desc.description}}</div>
+    
+        <div><i> <strong>Author : </strong></i> <strong>{{desc.author}}</strong></div>
+      
+  </div>
+
+</div>

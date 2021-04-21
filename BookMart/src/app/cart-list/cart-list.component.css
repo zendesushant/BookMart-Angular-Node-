@@ -1,0 +1,14 @@
+.price{
+    margin-top: 10%;
+}
+.list-group-item{
+    background-image: linear-gradient(to right, #d9dfe4, rgb(226 216 216 / 0%));
+}
+
+button{
+    letter-spacing: 2px;
+}
+
+h3{
+    background-color:rgb(128 128 128 / 4%);
+}

@@ -1,0 +1,21 @@
+<ul class="list-group">
+    <div *ngFor="let c of cartlist; let i=index">
+    <li  class="list-group-item">BookName:<strong>{{c.name}}</strong>  Price:<strong>{{c.price}}$</strong>
+        <!-- <span [ngStyle]="{marginLeft:'10px'}"
+        class="btn btn-sm btn-secondary"type="button" (click)="removeItemFromCart(i)">Remove</span> -->
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon" type="button" (click)="removeItemFromCart(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </li>
+        
+        </div>
+    <div *ngIf="cartlist.length>0" >
+    <h3 [ngStyle]="{padding:'20px',marginTop:'5%'}">PRICE DETAILS</h3>
+    <hr>
+    <h2>Total Amount: {{totalShpppingPrice}}$</h2>
+    </div>
+
+    <button (click)="onPlaceOrder()" [ngStyle]="{letterSpacing:'2px'}"class="btn btn-lg btn-danger"*ngIf="cartlist.length>0" type="button">Place Order</button>
+  </ul>
+
+  <app-empty-cart *ngIf="cartlist.length < 1"></app-empty-cart>

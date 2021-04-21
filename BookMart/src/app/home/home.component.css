@@ -1,0 +1,13 @@
+.card{
+           
+    background-image: linear-gradient(
+        45deg
+        , #4a3535b0, transparent);
+            /* /* left:10%;
+            top:50%; */
+            right: 50%;
+            position: absolute;
+            justify-content: center;
+            transform: translate(50%,50%); 
+            opacity: .8;
+}

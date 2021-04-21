@@ -1,0 +1,34 @@
+<div class="signupStyle">
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
+            <div>
+                <label for="username"class="signup-input-fonts">User Name</label>
+                <input class="form-control"type="text" placeholder="Enter Email-ID" formControlName="username">
+                <span [ngStyle]="{color:'red'}" *ngIf="signUpForm.get('username').touched && !signUpForm.get('username').valid">*This Field is Required</span>
+                <span [ngStyle]="{color:'red'}" *ngIf="signUpForm.get('username').touched && signUpForm.get('username').errors?.UserNameAlreadyExist">
+                    UserAlreadyExist
+                </span>
+            </div>
+
+            <div>
+                <label for="password" class="signup-input-fonts">Password</label>
+                <input class="form-control" type="text" placeholder="Password" formControlName="password">
+                <span [ngStyle]="{color:'red'}" *ngIf="!signUpForm.get('password').valid && signUpForm.get('password').touched ">*This Field is Required</span>
+            </div>
+
+            <div>
+                <label for="mobile" class="signup-input-fonts">mobile</label>
+                <input class="form-control" type="text" placeholder="Mobile" formControlName="mobile">
+                <span [ngStyle]="{color:'red'}" *ngIf="!signUpForm.get('mobile').valid && signUpForm.get('mobile').touched ">*This Field is Required</span>
+            </div>
+
+            <button class="btn btn-primary btn-block"  [disabled]="signUpForm.invalid" type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+</div>
+
+<ngx-spinner *ngIf="isLoading" size="medium" color="#fff" type="ball-spin-clockwise-fade">
+<p>Loading...</p>>
+</ngx-spinner>

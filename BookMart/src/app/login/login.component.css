@@ -1,0 +1,21 @@
+.loginStyle
+{
+    padding: 90px;
+    background-color:#2b3a46;
+    position: absolute;
+    left:0%;
+    transform:translate(60%,10%);
+}
+.form-control{
+    margin-bottom:10%;
+}
+
+.btn{
+    padding: auto;
+    margin-bottom: 10%;
+}
+.login-input-fonts{
+    color: floralwhite;
+    font-style: italic;
+    letter-spacing: 2px;
+}

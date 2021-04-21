@@ -1,0 +1,23 @@
+<div class="loginStyle">
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+            <div>
+                <label for="username" class="login-input-fonts">User Name</label>
+                <input class="form-control"type="text" placeholder="Enter Email-ID" formControlName="username" >
+                
+                <span [ngStyle]="{color:'red'}" *ngIf="loginForm.get('username').touched && !loginForm.get('username').valid">*This Field is Required</span>
+            </div>
+
+            <div>
+                <label for="password" class="login-input-fonts">Password</label>
+                <input class="form-control" type="text" placeholder="Password" formControlName="password">
+                <span [ngStyle]="{color:'red'}" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched ">*This Field is Required</span>
+            </div>
+
+            <button class="btn btn-primary btn-block" [disabled]="!loginForm.valid" type="submit">Login</button>
+            <button class="btn btn-success btn-lg" (click)="creatNewAccount()">Create New Account</button>
+        </form>
+    </div>
+</div>
+</div>

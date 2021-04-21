@@ -1,0 +1,16 @@
+.card{
+    padding: 30px;
+}
+.only-on-hover  {
+    position: absolute;
+      width: 150px;
+      left:0;
+      top: 190px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .1s ease;
+      }
+      
+      .card:hover .only-on-hover  {
+        opacity: 1;
+      }

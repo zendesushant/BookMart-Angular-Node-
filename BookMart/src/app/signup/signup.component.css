@@ -1,0 +1,21 @@
+.signupStyle{
+    padding: 90px;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,10%);
+    background-color: greenyellow;
+}
+.signup-input-fonts{
+    font-style: italic;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.form-control{
+    margin-bottom:10%;
+}
+
+.btn{
+    padding: auto;
+    margin-bottom: 10%;
+}

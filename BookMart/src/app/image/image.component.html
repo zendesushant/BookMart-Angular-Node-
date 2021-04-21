@@ -1,0 +1,21 @@
+<button mat-raised-button color="primary" type="button" (click)="ref.click()">Pick Image</button>
+<button mat-raised-button color="primary" type="button" (click)="onPostImage()">POstImage</button>
+<input style="visibility: hidden;"type="file" #ref (change)="onPicked($event)">
+
+<img [src]="previewImg" height="200px" width="200px">
+
+<div  fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+    <mat-card  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Title</mat-card-title>
+        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="postedImage" style="height: 200px; width: 200px;">
+      <mat-card-content>
+        <p>
+          Content
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
