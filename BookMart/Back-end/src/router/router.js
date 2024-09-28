@@ -11,6 +11,22 @@ const MIME_TYPE_MAP={
     'image/jpg':'jpg'
 };
 const multer=require('multer');
+/*const upload = multer({
+  dest: 'Images',
+  limits : {
+    fileSize : 10000000
+  }
+},
+  fileFilter(req,file,cb){
+     if(!file.originalname.endsWith('.pdf')) {
+       return cb(new Error('Please upload pdf'))
+     }
+    if(!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+           return cb(new Error('Please upload Image'))
+    }
+  }
+                     
+)*/
 const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
         const isValid=MIME_TYPE_MAP[file.mimetype]
